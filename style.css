@@ -1,0 +1,14 @@
+:root {
+    --cream: #F1DED4;
+    --red: #E92527;
+    --orange: #F04F25;
+    --light-orange: #F4A375;
+
+    --body-copy: 1rem;
+    --heading-copy: calc(var(--body-copy) * 3);
+    --heading-font: "dirty-bakers-dozen", sans-serif;
+}
+
+
+
+
