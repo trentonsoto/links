@@ -4,11 +4,47 @@
     --orange: #F04F25;
     --light-orange: #F4A375;
 
-    --body-copy: 1rem;
+    --body-copy: 2rem;
+    --body-font: "vandertak-regular", sans-serif;
     --heading-copy: calc(var(--body-copy) * 3);
     --heading-font: "dirty-bakers-dozen", sans-serif;
 }
 
+body {
+    /* background-image: url("background.png");
+    background-size: 100%; */
+    background-color: var(--cream);
 
+    p {
+        font-family: var(--body-font);
+        color: var(--light-orange);
+        font-size: var(--body-copy);
+        text-align: center;
+    }
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: calc(var(--heading-copy) * 2);
+    color: var(--orange);
+    text-align: center;
+}
+
+ul {
+    font-family: var(--body-font);
+    font-size: calc(var(--body-copy) * 0.60);
+    color: var(--light-orange);
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    padding: 4rem;
+}
+
+
+.img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
 
 
