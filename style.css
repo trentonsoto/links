@@ -8,6 +8,9 @@
     --body-font: "vandertak-regular", sans-serif;
     --heading-copy: calc(var(--body-copy) * 3);
     --heading-font: "dirty-bakers-dozen", sans-serif;
+
+    --padding: 8rem;
+    --container-width: 100%;
 }
 
 body {
@@ -30,6 +33,15 @@ h1 {
     text-align: center;
 }
 
+.text {
+    background-color: var(--orange);
+    width: 57vw;
+    margin-block-end: var(--padding);
+    p{
+        color: var(--cream); 
+    }
+}
+
 ul {
     font-family: var(--body-font);
     font-size: calc(var(--body-copy) * 0.60);
@@ -41,10 +53,24 @@ ul {
 }
 
 
-.img {
+/* .img {
     width: 40%;
+    display: block;
+    margin: auto;
+    padding-block-start: var(--padding);
+} */
+
+.content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    width: var(--container-width);
+    padding-block-start: var(--padding);
 }
 
+.link iframe {
+    width: 57vw;
+    height: 55vh;
+}
 
