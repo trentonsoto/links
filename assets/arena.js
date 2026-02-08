@@ -75,7 +75,6 @@ let renderBlock = (blockData) => {
 	// Text!
 	else if (blockData.type == 'Text') {
 		// …up to you!
-        
 	}
 
 	// Uploaded (not linked) media…
