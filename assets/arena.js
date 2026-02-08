@@ -57,11 +57,25 @@ let renderBlock = (blockData) => {
 	// Images!
 	else if (blockData.type == 'Image') {
 		// …up to you!
+        let imageItem =
+        `
+        <li>
+            <figure>
+                <picture>
+                    <source media="(width < 500px)" srcset="${blockData.image.small.src_2x}">
+                    <source media="(width < 1000px)" srcset="${blockData.image.medium.src_2x}">
+                    <img alt="${blockData.image.alt_text}" src="${blockData.image.large.src_2x}">
+                </picture>
+            </figure>
+        </li>
+        `
+        channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
 
 	// Text!
 	else if (blockData.type == 'Text') {
 		// …up to you!
+        
 	}
 
 	// Uploaded (not linked) media…
