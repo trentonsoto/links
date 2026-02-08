@@ -33,16 +33,16 @@ h1 {
     text-align: center;
 }
 
-.text {
+/* .text {
     background-color: var(--orange);
     width: 57vw;
     margin-block-end: var(--padding);
     p{
         color: var(--cream); 
     }
-}
+} */
 
-ul {
+nav ul {
     font-family: var(--body-font);
     font-size: calc(var(--body-copy) * 0.60);
     color: var(--light-orange);
@@ -50,6 +50,14 @@ ul {
     justify-content: center;
     gap: 10rem;
     padding: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--padding) * 2);
+    gap: 2em;
+    list-style: none;
 }
 
 
@@ -60,17 +68,17 @@ ul {
     padding-block-start: var(--padding);
 } */
 
-.content {
+/* .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10rem;
     width: var(--container-width);
     padding-block-start: var(--padding);
-}
+} */
 
-.link iframe {
+/* .link iframe {
     width: 57vw;
     height: 55vh;
-}
+} */
 
