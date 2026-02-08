@@ -14,8 +14,6 @@
 }
 
 body {
-    /* background-image: url("background.png");
-    background-size: 100%; */
     background-color: var(--cream);
 
     p {
@@ -45,7 +43,7 @@ nav ul {
     padding: 4rem;
 }
 
-.content {
+#channel-blocks {
     display: flex;
     flex-direction: column;
     padding: calc(var(--padding) * 2);
@@ -53,4 +51,7 @@ nav ul {
     list-style: none;
 }
 
-
+#channel-blocks li {
+    background-color: var(--red);
+    margin-block: var(--padding);
+}
