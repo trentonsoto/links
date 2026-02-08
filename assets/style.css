@@ -33,14 +33,7 @@ h1 {
     text-align: center;
 }
 
-/* .text {
-    background-color: var(--orange);
-    width: 57vw;
-    margin-block-end: var(--padding);
-    p{
-        color: var(--cream); 
-    }
-} */
+
 
 nav ul {
     font-family: var(--body-font);
@@ -60,25 +53,4 @@ nav ul {
     list-style: none;
 }
 
-
-/* .img {
-    width: 40%;
-    display: block;
-    margin: auto;
-    padding-block-start: var(--padding);
-} */
-
-/* .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10rem;
-    width: var(--container-width);
-    padding-block-start: var(--padding);
-} */
-
-/* .link iframe {
-    width: 57vw;
-    height: 55vh;
-} */
 
