@@ -8,13 +8,10 @@
     --mid-brown: #A0622A;
     --dark-brown: #6B3A1F;
 
-    --body-copy: 2rem;
     --body-font: "vandertak-regular", sans-serif;
-    --heading-copy: calc(var(--body-copy) * 3);
     --heading-font: "dirty-bakers-dozen", sans-serif;
 
     --padding: 8rem;
-    --container-width: 100%;
 }
 
 body {
@@ -22,7 +19,6 @@ body {
 
     p {
         font-family: var(--body-font);
-        color: var(--light-orange);
         font-size: var(--body-copy);
         text-align: center;
     }
