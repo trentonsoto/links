@@ -19,7 +19,7 @@
     --body-copy: 1rem;
     --small-heading-copy: calc(var(--body-copy) * 1.25);
     --label-copy: calc(var(--body-copy) * 1.75);
-    --heading-copy: calc(var(--body-copy) * 3);
+    --heading-copy: calc(var(--body-copy) * 4);
 
 
     /* layout */
@@ -40,13 +40,6 @@ body {
         font-size: var(--body-copy);
         text-align: center;
     }
-}
-
-h1 {
-    font-family: var(--heading-font);
-    font-size: var(--heading-copy);
-    color: var(--orange);
-    text-align: center;
 }
 
 
@@ -86,9 +79,23 @@ nav ul {
 @media (width > 530px) {
     nav ul {
         justify-content: center;
+        gap: calc(var(--spacing-small) * 2);
     }
 }
 
+
+header {
+    
+}
+
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: var(--heading-copy);
+    color: var(--orange);
+    text-align: center;
+    line-height: 1;
+}
 
 
 #channel-blocks {
