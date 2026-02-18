@@ -17,7 +17,7 @@
     --body-copy: 1rem;
     --small-heading-copy: calc(var(--body-copy) * 1.25);
     --label-copy: calc(var(--body-copy) * 1.75);
-    --heading-copy: calc(var(--body-copy) * 5);
+    --heading-copy: calc(var(--body-copy) * 3);
 
     /* layout */
     --spacing: 1rem;
@@ -40,14 +40,14 @@ body {
 
 h1 {
     font-family: var(--heading-font);
-    font-size: calc(var(--heading-copy) * 2);
+    font-size: var(--heading-copy);
     color: var(--orange);
     text-align: center;
 }
 
 
 
-nav ul {
+/* nav ul {
     font-family: var(--body-font);
     font-size: calc(var(--body-copy) * 0.60);
     color: var(--light-orange);
@@ -55,13 +55,47 @@ nav ul {
     justify-content: center;
     gap: 10rem;
     padding: 4rem;
+} */
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--ink);
+    padding-block: var(--spacing);
+    padding-inline: calc(var(--spacing) * 2);
+    border-block-end: solid var(--orange) var(--court-lines);
 }
+
+
+nav ul {
+    display: flex;
+    /* justify-content: center; */
+    /* removing this justify content let me see my first button */
+    gap: var(--spacing);
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.button {
+    font-family: var(--body-font);
+    font-size: var(--small-heading-copy);
+    color: var(--light-orange);
+    padding-block: calc(var(--spacing) * 0.5);
+    padding-inline: var(--spacing);
+
+    &:hover {
+        color: var(--cream);
+    }
+}
+
+
 
 #channel-blocks {
     /* display: flex;
     flex-direction: column; */
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
+    /* grid-template-columns: 3fr 3fr 3fr; */
     padding: calc(var(--padding) * 1/2);
     gap: 2em;
     list-style: none;
