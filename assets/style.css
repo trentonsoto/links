@@ -26,7 +26,7 @@
     --spacing-small: 1rem;
     --spacing-xs: calc(var(--spacing-small) * 0.5);
     /* --max-width: 90rem; */
-    /* --padding: 8rem; */
+    --padding: 8rem;
     /* --container-width: 100%; */
     --court-lines: 0.2rem;
 }
@@ -89,7 +89,16 @@ header {
     padding-inline: calc(var(--spacing-small) * 2);
     text-align: center;
     
-
+    a {
+        color: var(--mid-brown);
+    }
+    
+    #channel-description p{
+        color: var(--dark-brown);
+        font-family: var(--body-font);
+        font-size: var(--body-copy);
+    }
+    
 }
 
 
