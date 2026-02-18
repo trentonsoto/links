@@ -8,6 +8,9 @@
     --mid-brown: #A0622A;
     --dark-brown: #6B3A1F;
     --ink: #1A0A00;
+    --nav-light: rgba(240, 79, 37, 0.35);
+
+    --glow-orange: var(--orange) 0 0 0.5rem;
 
 
     /* fonts */
@@ -67,19 +70,24 @@ nav ul {
 .button {
     font-family: var(--body-font);
     font-size: var(--small-heading-copy);
-    color: var(--light-orange);
+    color: var(--nav-light);
     padding-block: var(--spacing-xs);
     padding-inline: var(--spacing-small);
 
     &:hover {
-        color: var(--cream);
+        color: var(--orange);
+        text-shadow: var(--glow-orange);
     }
 }
 
-@media (width > 530px) {
+@media (width > 640px) {
     nav ul {
         justify-content: center;
         gap: calc(var(--spacing-small) * 2);
+    }
+
+    .button {
+        font-size: var(--label-copy);
     }
 }
 
@@ -109,7 +117,7 @@ h1 {
     text-align: center;
     line-height: 1;
     /* from MDN, adding background shadows to make it feel like a basketball / color.x.y */
-    text-shadow: var(--dark-brown) 0.1rem 0.1rem, var(--red) 0.2rem 0.2rem;
+    text-shadow: var(--dark-brown) 0.1rem 0.1rem 0, var(--red) 0.2rem 0.2rem;
 }
 
 
