@@ -9,9 +9,11 @@
     --dark-brown: #6B3A1F;
     --ink: #1A0A00;
 
+
     /* fonts */
     --body-font: "vandertak-regular", sans-serif;
     --heading-font: "dirty-bakers-dozen", sans-serif;
+
 
     /* type scale */
     --body-copy: 1rem;
@@ -19,10 +21,12 @@
     --label-copy: calc(var(--body-copy) * 1.75);
     --heading-copy: calc(var(--body-copy) * 3);
 
+
     /* layout */
-    --spacing: 1rem;
-    --max-width: 90rem;
-    --padding: 8rem;
+    --spacing-small: 1rem;
+    --spacing-xs: calc(var(--spacing-small) * 0.5);
+    /* --max-width: 90rem; */
+    /* --padding: 8rem; */
     /* --container-width: 100%; */
     --court-lines: 0.2rem;
 }
@@ -52,8 +56,8 @@ nav{
     top: 0;
     z-index: 100;
     background-color: var(--ink);
-    padding-block: calc(var(--spacing) * 1.1);
-    padding-inline: calc(var(--spacing) * 2);
+    padding-block: var(--spacing-small);
+    padding-inline: calc(var(--spacing-small) * 2);
     border-block-end: solid var(--orange) var(--court-lines);
 }
 
@@ -62,8 +66,8 @@ nav ul {
     display: flex;
     /* justify-content: center; */
     /* removing this justify content let me see my first button */
-    gap: var(--spacing);
-    /* from week 9 class site for overflow, since I didn't want to fit everything onto the screen */
+    gap: var(--spacing-small);
+    /* from week 9 class site for overflow, since I didn't want to fit everything onto the screen, this allows for the scroll to happen on mobile */
     overflow-y: auto;
 }
 
@@ -71,8 +75,8 @@ nav ul {
     font-family: var(--body-font);
     font-size: var(--small-heading-copy);
     color: var(--light-orange);
-    padding-block: calc(var(--spacing) * 0.5);
-    padding-inline: var(--spacing);
+    padding-block: var(--spacing-xs);
+    padding-inline: var(--spacing-small);
 
     &:hover {
         color: var(--cream);
