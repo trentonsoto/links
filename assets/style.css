@@ -1,8 +1,11 @@
 :root {
+    /* colors */
     --cream: #F1DED4;
     --red: #E92527;
     --orange: #F04F25;
     --light-orange: #F4A375;
+    --light-brown: #C68642;
+    --brown: #A0522D;
 
     --body-copy: 2rem;
     --body-font: "vandertak-regular", sans-serif;
