@@ -46,23 +46,13 @@ h1 {
 }
 
 
-
-/* nav ul {
-    font-family: var(--body-font);
-    font-size: calc(var(--body-copy) * 0.60);
-    color: var(--light-orange);
-    display: flex;
-    justify-content: center;
-    gap: 10rem;
-    padding: 4rem;
-} */
-
+/****************  NAVIGATION BAR  ****************/
 nav{
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: var(--ink);
-    padding-block: var(--spacing);
+    padding-block: calc(var(--spacing) * 1.1);
     padding-inline: calc(var(--spacing) * 2);
     border-block-end: solid var(--orange) var(--court-lines);
 }
@@ -73,8 +63,8 @@ nav ul {
     /* justify-content: center; */
     /* removing this justify content let me see my first button */
     gap: var(--spacing);
-    padding: 2rem;
-    overflow-x: auto;
+    /* from week 9 class site for overflow, since I didn't want to fit everything onto the screen */
+    overflow-y: auto;
 }
 
 .button {
@@ -86,6 +76,12 @@ nav ul {
 
     &:hover {
         color: var(--cream);
+    }
+}
+
+@media (width > 530px) {
+    nav ul {
+        justify-content: center;
     }
 }
 
