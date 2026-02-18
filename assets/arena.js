@@ -56,8 +56,7 @@ let renderBlock = (blockData) => {
 
 	// Images!
 	else if (blockData.type == 'Image') {
-		// …up to you!
-        let imageItem =
+		let imageItem =
         `
         <li>
             <figure>
@@ -70,7 +69,9 @@ let renderBlock = (blockData) => {
         </li>
         `
         channelBlocks.insertAdjacentHTML('beforeend', imageItem)
-	}
+    }
+    // console.log("image-type", blockData);
+    
 
 	// Text!
 	else if (blockData.type == 'Text') {
