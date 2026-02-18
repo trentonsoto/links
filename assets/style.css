@@ -9,17 +9,17 @@
     --dark-brown: #6B3A1F;
     --ink: #1A0A00;
 
-
+    /* fonts */
     --body-font: "vandertak-regular", sans-serif;
     --heading-font: "dirty-bakers-dozen", sans-serif;
 
-
+    /* type scale */
     --body-copy: 1rem;
     --small-heading-copy: calc(var(--body-copy) * 1.25);
     --label-copy: calc(var(--body-copy) * 1.75);
     --heading-copy: calc(var(--body-copy) * 5);
 
-
+    /* layout */
     --spacing: 1rem;
     --max-width: 90rem;
     --padding: 8rem;
