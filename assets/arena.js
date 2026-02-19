@@ -12,7 +12,8 @@ let placeChannelInfo = (channelData) => {
 	let channelLink = document.querySelector('#channel-link')
 
 	// Then set their content/attributes to our data:
-	channelTitle.innerHTML = channelData.title
+	channelTitle.innerHTML = `Inspired by Basket<wbr>ball`
+    // The attribution for this change in title will be inside of CSS, starting with "WORDBREAK ATTRIBUTION"
 	channelDescription.innerHTML = channelData.description.html
 	channelCount.innerHTML = channelData.counts.blocks
 	channelLink.href = `https://www.are.na/channel/${channelSlug}`
