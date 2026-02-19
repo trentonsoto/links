@@ -39,7 +39,7 @@
     --spacing-medium: calc(var(--spacing-small) * 2);
     --spacing-large: calc(var(--spacing-small) * 4);
     /* --max-width: 90rem; */
-    --padding: 8rem;
+    /* --padding: 8rem; */
     /* --container-width: 100%; */
     --court-lines: 0.2rem;
 }
@@ -109,7 +109,9 @@ nav ul {
 }
 
 
-
+h4 {
+    color: var(--light-orange);
+}
 
 
 
@@ -118,15 +120,18 @@ header {
     padding-block: var(--spacing-large);
     padding-inline: var(--spacing-medium);
     text-align: center;
+
+
+    
     
     .arena-link{
-        margin-block-start: var(--spacing-large);
-
+        /* margin-block-start: var(--spacing-large); */
+        
         a {
             color: var(--light-brown);
             font-size: 2.5vw;
-            font-family: var(--scoreboard-font);
-    
+            font-family: var(--body-font);
+            
             &:hover {
                 color: var(--orange);
                 text-shadow: var(--glow-orange);
@@ -138,11 +143,63 @@ header {
         color: var(--light-brown);
         font-family: var(--body-font);
         font-size: 2.5vw;
-        margin-block-start: var(--spacing-large);
+        /* margin-block-start: var(--spacing-large); */
     }
     
 }
+.heading-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* week 8 from class site */
+    grid-template-areas: 
+    "title title"
+    "link description";
+    gap: var(--spacing-medium);
+    /* border: solid var(--orange) var(--court-lines); */
+}
 
+.title, .link, .description {
+    padding: var(--spacing-small);
+    border: solid var(--light-brown) var(--court-lines);
+}
+
+
+.title { 
+    grid-area: title; 
+}
+.link { 
+    grid-area: link; 
+}
+.description { 
+    grid-area: description; 
+}
+
+
+
+@media (width < 1024px) {
+    .heading-section {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title"
+        "link"
+        "description"
+        ;
+    }
+}
+
+
+@media (width > 1024px) {
+
+    .heading-section {
+        gap: 0;
+        /* border: solid var(--light-brown) var(--court-lines); */
+
+        .title, .link, .description {
+            padding: var(--spacing-small);
+            border: none;
+}
+    }
+}
 
 h1 {
     font-family: var(--heading-font);
