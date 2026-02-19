@@ -51,7 +51,7 @@ body {
         font-family: var(--body-font);
         color: var(--ink);
         font-size: var(--body-copy);
-        text-align: center;
+        /* text-align: center; */
     }
 }
 
@@ -121,12 +121,8 @@ header {
     padding-inline: var(--spacing-medium);
     text-align: center;
 
-
-    
-    
     .arena-link{
         /* margin-block-start: var(--spacing-large); */
-        
         a {
             color: var(--light-brown);
             font-size: 2.5vw;
@@ -144,9 +140,20 @@ header {
         font-family: var(--body-font);
         font-size: 2.5vw;
         /* margin-block-start: var(--spacing-large); */
-    }
-    
+    } 
 }
+
+h4 {
+    font-family: var(--scoreboard-font);
+    font-size: var(--body-copy);
+    color: var(--orange);
+    text-shadow: var(--glow-orange);
+    letter-spacing: 0.20rem;
+    padding: var(--spacing-xs);
+    background-color: var(--ink);
+    display: inline-block;
+}
+
 .heading-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -156,24 +163,24 @@ header {
     "link description";
     gap: var(--spacing-medium);
     /* border: solid var(--orange) var(--court-lines); */
-}
 
-.title, .link, .description {
-    padding: var(--spacing-small);
-    border: solid var(--light-brown) var(--court-lines);
-}
+    .title, .link, .description {
+        padding: var(--spacing-small);
+        border: solid var(--light-brown) var(--court-lines);
+        text-align: center;
+        align-items: center;
+    }
 
-
-.title { 
-    grid-area: title; 
+    .title { 
+        grid-area: title; 
+    }
+    .link { 
+        grid-area: link; 
+    }
+    .description { 
+        grid-area: description; 
+    }
 }
-.link { 
-    grid-area: link; 
-}
-.description { 
-    grid-area: description; 
-}
-
 
 
 @media (width < 1024px) {
@@ -182,24 +189,28 @@ header {
         grid-template-areas: 
         "title"
         "link"
-        "description"
-        ;
+        "description";
     }
 }
 
 
 @media (width > 1024px) {
-
     .heading-section {
         gap: 0;
         /* border: solid var(--light-brown) var(--court-lines); */
 
         .title, .link, .description {
             padding: var(--spacing-small);
-            border: none;
-}
+            /* border: none; */
+            border: solid var(--light-brown) var(--court-lines);
+        }
     }
 }
+
+
+
+
+
 
 h1 {
     font-family: var(--heading-font);
