@@ -36,6 +36,8 @@
     /* layout */
     --spacing-small: 1rem;
     --spacing-xs: calc(var(--spacing-small) * 0.5);
+    --spacing-medium: calc(var(--spacing-small) * 2);
+    --spacing-large: calc(var(--spacing-small) * 4);
     /* --max-width: 90rem; */
     --padding: 8rem;
     /* --container-width: 100%; */
@@ -98,7 +100,7 @@ nav ul {
 @media (width > 640px) {
     nav ul {
         justify-content: center;
-        gap: calc(var(--spacing-small) * 2);
+        gap: var(--spacing-medium);
     }
 
     .button {
@@ -113,18 +115,30 @@ nav ul {
 
 /****************** HEADER ********************/
 header {
-    padding-block: calc(var(--spacing-small) * 4);
-    padding-inline: calc(var(--spacing-small) * 2);
+    padding-block: var(--spacing-large);
+    padding-inline: var(--spacing-medium);
     text-align: center;
     
-    a {
-        color: var(--mid-brown);
+    .arena-link{
+        margin-block-start: var(--spacing-large);
+
+        a {
+            color: var(--light-brown);
+            font-size: 2.5vw;
+            font-family: var(--scoreboard-font);
+    
+            &:hover {
+                color: var(--orange);
+                text-shadow: var(--glow-orange);
+            }
+        }
     }
     
     #channel-description p{
-        color: var(--dark-brown);
+        color: var(--light-brown);
         font-family: var(--body-font);
-        font-size: var(--body-copy);
+        font-size: 2.5vw;
+        margin-block-start: var(--spacing-large);
     }
     
 }
@@ -149,10 +163,6 @@ h1 {
     }
 }
 
-.arena-link {
-    color: var(--light-brown);
-    font-size: 2.5vw;
-}
 
 
 
