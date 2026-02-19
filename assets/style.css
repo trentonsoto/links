@@ -30,7 +30,7 @@
     --body-copy: 1rem;
     --small-heading-copy: calc(var(--body-copy) * 1.25);
     --label-copy: calc(var(--body-copy) * 1.75);
-    --heading-copy: 10vw;
+    --heading-copy: 11vw;
 
 
     /* layout */
@@ -138,6 +138,16 @@ h1 {
     text-shadow: var(--dark-brown) 0.1rem 0.1rem 0, var(--red) 0.2rem 0.2rem;
 }
 
+@media (width < 550px) {
+    h1 {
+        font-size: 13vw;
+    }
+}
+
+/* .arena-link {
+    font-size: calc(var(--heading-copy) * 0.4);
+} */
+
 
 
 /* WORDBREAK ATTRIBUTION */
@@ -146,15 +156,15 @@ h1 {
 /* I used GPT to see if it was possible to do a word break, and it said to change the title in the arena.js file with the word break attatched, so I did that */
 /* And then I did display none, media query display inline, and it worked for mobile only */
 /* After struggling with the h1 sizing, I swapped out the variable for "vw" and it is behaving much better, so I don't think I need the wbr anymore? */
-/* wbr {
+wbr {
     display: none;
-} */
+} 
 
-/* @media (width < 800px) {
+@media (width < 768px) {
     wbr {
         display: inline;
     }
-} */
+} 
 
 
 #channel-blocks {
