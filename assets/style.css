@@ -155,63 +155,7 @@ h4 {
     display: inline-block;
 }
 
-.heading-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* week 8 from class site */
-    grid-template-areas: 
-    "title title"
-    "link description";
-    gap: var(--spacing-medium);
-    /* border: solid var(--orange) var(--court-lines); */
 
-    .title, .link, .description {
-        padding: var(--spacing-small);
-        border: solid var(--light-brown) var(--court-lines);
-        text-align: center;
-        align-items: center;
-    }
-
-    .title { 
-        grid-area: title; 
-    }
-    .link { 
-        grid-area: link; 
-    }
-    .description { 
-        grid-area: description; 
-    }
-}
-
-
-@media (width < 1024px) {
-    .heading-section {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "title"
-        "link"
-        "description";
-    }
-}
-
-
-@media (width > 1024px) {
-    .heading-section {
-        gap: 0;
-        column-gap: var(--spacing-small);
-        /* border: solid var(--light-brown) var(--court-lines); */
-
-        .title, .link, .description {
-            padding: var(--spacing-small);
-            /* border: none; */
-            border: solid var(--light-brown) var(--court-lines);
-        }
-
-        .title {
-            margin-block-end: var(--spacing-small);
-        }
-    }
-}
 
 
 
