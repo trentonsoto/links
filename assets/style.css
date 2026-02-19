@@ -107,6 +107,11 @@ nav ul {
 }
 
 
+
+
+
+
+/****************** HEADER ********************/
 header {
     padding-block: calc(var(--spacing-small) * 4);
     padding-inline: calc(var(--spacing-small) * 2);
@@ -144,9 +149,10 @@ h1 {
     }
 }
 
-/* .arena-link {
-    font-size: calc(var(--heading-copy) * 0.4);
-} */
+.arena-link {
+    color: var(--light-brown);
+    font-size: 2.5vw;
+}
 
 
 
@@ -156,6 +162,7 @@ h1 {
 /* I used GPT to see if it was possible to do a word break, and it said to change the title in the arena.js file with the word break attatched, so I did that */
 /* And then I did display none, media query display inline, and it worked for mobile only */
 /* After struggling with the h1 sizing, I swapped out the variable for "vw" and it is behaving much better, so I don't think I need the wbr anymore? */
+/* I need it, I added a break point back inside the arena.js file, and now this is working */
 wbr {
     display: none;
 } 
@@ -167,13 +174,17 @@ wbr {
 } 
 
 
+
+
+
+
 #channel-blocks {
     /* display: flex;
     flex-direction: column; */
     display: grid;
     /* grid-template-columns: 3fr 3fr 3fr; */
     padding: calc(var(--padding) * 1/2);
-    gap: 2em;
+    gap: 2rem;
     list-style: none;
 }
 
