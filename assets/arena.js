@@ -31,7 +31,7 @@ let renderBlock = (blockData) => {
 		// Declares a “template literal” of the dynamic HTML we want.
 		let linkItem =
 			`
-			<li>
+			<li class="link-block">
 				<p><em>Link</em></p>
 				<figure>
 					<picture>
@@ -40,7 +40,7 @@ let renderBlock = (blockData) => {
 						<img alt="${blockData.image.alt_text}" src="${ blockData.image.large.src_2x }">
 					</picture>
 					<figcaption>
-						<h3>${ blockData.title }</h3>
+						<h4>${ blockData.title }</h4>
 						${ blockData.description.html }
 					</figcaption>
 				</figure>
@@ -59,13 +59,17 @@ let renderBlock = (blockData) => {
 	else if (blockData.type == 'Image') {
 		let imageItem =
         `
-        <li>
+        <li class="image-block">
             <figure>
                 <picture>
                     <source media="(width < 500px)" srcset="${blockData.image.small.src_2x}">
                     <source media="(width < 1000px)" srcset="${blockData.image.medium.src_2x}">
                     <img alt="${blockData.image.alt_text}" src="${blockData.image.large.src_2x}">
                 </picture>
+				<figcaption>
+					<h4>${ blockData.title }</h4>
+					<p>${ blockData.description?.html }</p>
+				</figcaption>
             </figure>
         </li>
         `
@@ -81,11 +85,11 @@ let renderBlock = (blockData) => {
 	else if (blockData.type == 'Text') {
         let textItem =
 			`
-			<li>
+			<li class="text-block">
 				<div class="text">
-					<h3>${ blockData.title }</h3>
-					<p>${ blockData.description?.html }</p>
 					<p>${ blockData.content.html }</p>
+					<h4>${ blockData.title }</h4>
+					<p>${ blockData.description?.html }</p>
 				</div>
 			</li>
 			`
@@ -102,8 +106,9 @@ let renderBlock = (blockData) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li>
+				<li class="video-block">
 					<p><em>Video</em></p>
+					<h4>${blockData.title}</h4>
 					<video controls src="${ blockData.attachment.url }"></video>
 				</li>
 				`
@@ -146,9 +151,11 @@ let renderBlock = (blockData) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li>
+				<li class="linked-video-block">
 					<p><em>Linked Video</em></p>
 					${ blockData.embed.html }
+					<h4>${blockData.title}</h4>
+					${ blockData.description?.html }
 				</li>
 				`
 
