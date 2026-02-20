@@ -209,10 +209,10 @@ wbr {
 
 
 #channel-blocks {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     display: grid;
-    /* grid-template-columns: 3fr 3fr 3fr; */
+    grid-template-columns: 3fr 3fr 3fr;
     padding: calc(var(--padding) * 1/2);
     gap: 2rem;
     list-style: none;
