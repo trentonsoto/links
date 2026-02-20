@@ -161,6 +161,11 @@ h4 {
     color: var(--orange);
 }
 
+.image p {
+    color: var(--orange);
+}
+
+
 
 
 
@@ -216,6 +221,42 @@ wbr {
     padding: calc(var(--padding) * 1/2);
     gap: 2rem;
     list-style: none;
+
+    &.show-images {
+        li {
+            display: none;
+        }
+        li.image-block {
+            display: block;
+        }
+    }
+
+    &.show-links {
+        li {
+            display: none;
+        }
+        li.link-block {
+            display: block;
+        }
+    }
+
+    &.show-videos {
+        li {
+            display: none;
+        }
+        li.linked-video-block {
+            display: block;
+        }
+    }
+
+    &.show-text {
+        li {
+            display: none;
+        }
+        li.text-block {
+            display: block;
+        }
+    }
 }
 
 #channel-blocks li {
