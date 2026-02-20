@@ -75,8 +75,22 @@ let renderBlock = (blockData) => {
     
 
 	// Text!
+	// So I got this to work, and I am not entirely sure how I did so
+	// I copied the text link example from above, deleted the <picture> tag content, replaced <figcaption> content with a <div> and noticed other students including the blockData.content.html line, so I added that. (I understand that tk.'content'.tk pulls up text files, I believe?)
+	// It was working, but wasn't. It put the text files up, but everything else was not displaying, so I asked GPT, and it said to include a "?" in the description file and it worked. This helped to access the API that might be null. But, I still don't understand the specifics of this, just the big picture as a whole.
 	else if (blockData.type == 'Text') {
-		// …up to you!
+        let textItem =
+			`
+			<li>
+				<div class="text">
+					<h3>${ blockData.title }</h3>
+					<p>${ blockData.description?.html }</p>
+					<p>${ blockData.content.html }</p>
+				</div>
+			</li>
+			`
+
+		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
 	// Uploaded (not linked) media…
