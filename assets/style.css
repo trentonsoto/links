@@ -276,29 +276,6 @@ main {
     }
 }
 
-
-/* WORDBREAK ATTRIBUTION */
-/* I needed basketball to be broken up because it was too long for mobile, sizing was becoming arduous */
-/* I couldn't figure out how to do this from MDN, because I was familiar with only non breaking space*/
-/* I used GPT to see if it was possible to do a word break, and it said to change the title in the arena.js file with the word break attatched, so I did that */
-/* And then I did display none, media query display inline, and it worked for mobile only */
-/* After struggling with the h1 sizing, I swapped out the variable for "vw" and it is behaving much better, so I don't think I need the wbr anymore? */
-/* I need it, I added a break point back inside the arena.js file, and now this is working */
-/* wbr {
-    display: none;
-} 
-
-@media (width < 768px) {
-    wbr {
-        display: inline;
-    }
-}  */
-
-
-
-
-
-
 #channel-blocks {
     display: flex;
     flex-direction: row;
@@ -363,3 +340,23 @@ main {
 /* #channel-blocks link {
     width: calc(var(--container-width) * 40);
 } */
+
+
+
+
+/* WORDBREAK ATTRIBUTION */
+/* I needed basketball to be broken up because it was too long for mobile, sizing was becoming arduous */
+/* I couldn't figure out how to do this from MDN, because I was familiar with only non breaking space*/
+/* I used GPT to see if it was possible to do a word break, and it said to change the title in the arena.js file with the word break attatched, so I did that */
+/* And then I did display none, media query display inline, and it worked for mobile only */
+/* After struggling with the h1 sizing, I swapped out the variable for "vw" and it is behaving much better, so I don't think I need the wbr anymore? */
+/* I need it, I added a break point back inside the arena.js file, and now this is working */
+/* wbr {
+    display: none;
+} 
+
+@media (width < 768px) {
+    wbr {
+        display: inline;
+    }
+}  */
