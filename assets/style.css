@@ -322,8 +322,30 @@ main {
 }
 
 #channel-blocks li {
-    
-    /* inline-size: 16rem; */
+    min-width: 16rem;
+    width: 16rem;
+    background-color: var(--cream);
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+    /* I wanted to add a shadow behind the cards */
+    /* I found this on MDN */
+    /* It lets me add a box shadow behind my cards, so I added three */
+    box-shadow:
+        0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown), 0.8rem 0.8rem 1rem rgba(0, 0, 0, 0.5)
+        ;
+
+    /* I needed to have this stuff gone */
+    p, h4, figcaption {
+        display: none;
+    }
+
+    img {
+        display: block;
+        inline-size: 100%;
+        block-size: 26rem;
+        object-fit: contain;
+    }
     /* margin-block: var(--padding); */
     /* border: solid var(--red); */
 }
