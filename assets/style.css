@@ -47,7 +47,7 @@
 }
 
 body {
-    /* background-color: var(--scoreboard-background); */
+    background-color: var(--scoreboard-background);
 
     p {
         font-family: var(--body-font);
@@ -124,12 +124,6 @@ header {
     max-width: var(--max-width);
     margin-inline: auto;
 
-    .heading-section {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-medium);
-    }
-
     .arena-link{
         margin-block-start: var(--spacing-small);
         a {
@@ -150,13 +144,13 @@ header {
         color: var(--light-brown);
         font-family: var(--body-font);
         font-size: var(--body-copy);
-        /* margin-block-start: var(--spacing-large); */
+        line-height: 1.5rem;
     } 
 
 
      .header-stats {
             border: solid var(--mid-brown) var(--court-lines);
-            /* background-color: var(--ink); */
+            background-color: var(--ink);
 
             .stats {
                 padding-block: var(--spacing-xs);
@@ -164,6 +158,10 @@ header {
                 display: flex;
                 flex-direction: column;
                 gap: var(--spacing-xs);
+                border-block-end: solid var(--mid-brown) var(--court-lines);
+                &:last-child {
+                    border-block-end: 0;
+                }
 
                 .heading-label {
                     font-family: var(--scoreboard-font);
@@ -190,6 +188,23 @@ header {
 
 
 
+/* I had to move this outside of the header tag, but I don't understand why. I assumed this display:flex would work on the heading section. */
+/* Oh wait. I think it is because title and header-stats are two sections inside the heading.section, okay that makes sense. Don't mind this, this is for me to remember */
+.heading-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+
+    @media (width > 768px) {
+        flex-direction: row;
+
+        .title {flex-grow: 3;}
+        .header-stats {flex-shrink: 1;}
+    }
+}
+
+
+
 h4 {
     font-family: var(--scoreboard-font);
     font-size: var(--body-copy);
@@ -211,7 +226,9 @@ h4 {
     color: var(--orange);
 }
 
-
+.image-block img{
+    max-width: calc(0.4 * var(--max-width));
+}
 
 
 
@@ -219,19 +236,19 @@ h1 {
     font-family: var(--heading-font);
     font-size: var(--heading-copy);
     color: var(--orange);
-    /* text-align: center; */
     line-height: 1;
     /* I wanted to add background shadows to make it feel like a basketball */
     /* I found text shadow on MDN */
     /* The way I wrote it is color, x offset, y offset, blur radius */
     text-shadow: var(--dark-brown) 0.1rem 0.1rem 0, var(--red) 0.2rem 0.2rem;
+   
 }
-
-@media (width < 550px) {
+@media (width < 768px) {
     h1 {
-        font-size: 13vw;
+        font-size: calc(0.7 * var(--heading-copy));
     }
 }
+
 
 
 
@@ -261,11 +278,11 @@ wbr {
 #channel-blocks {
     display: flex;
     flex-direction: column;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 3fr 3fr 3fr;
     padding: calc(var(--padding) * 1/2);
     gap: 2rem;
-    list-style: none;
+    list-style: none; */
 
     &.show-images {
         li {
@@ -309,6 +326,15 @@ wbr {
     /* border: solid var(--red); */
 }
 
+@media (width > 1250px) {
+    #channel-blocks {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    padding: calc(var(--padding) * 1/2);
+    gap: 2rem;
+    list-style: none;
+    }
+}
 
 /* #channel-blocks link {
     width: calc(var(--container-width) * 40);
