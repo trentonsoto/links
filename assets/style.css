@@ -19,6 +19,7 @@
     /* The way I wrote it is color, x offset, y offset, blur radius */
     --glow-orange: var(--orange) 0 0 0.5rem;
     --glow-cream: var(--cream) 0 0 0.5rem;
+    /* I might get rid of this since I changed my theme, idk yet */
 
 
     /* fonts */
@@ -39,12 +40,10 @@
     --spacing-xs: calc(var(--spacing-small) * 0.5);
     --spacing-medium: calc(var(--spacing-small) * 2);
     --spacing-large: calc(var(--spacing-small) * 4);
-    /* --max-width: 90rem; */
-    /* --padding: 8rem; */
-    /* --container-width: 100%; */
     --court-lines: 0.2rem;
     --max-width: 90rem;
 }
+
 
 body {
     background-color: var(--scoreboard-background);
@@ -53,9 +52,9 @@ body {
         font-family: var(--body-font);
         color: var(--ink);
         font-size: var(--body-copy);
-        /* text-align: center; */
     }
 }
+
 
 
 /****************  NAVIGATION BAR  ****************/
@@ -110,10 +109,6 @@ nav ul {
     }
 }
 
-
-/* h4 {
-    color: var(--light-orange);
-} */
 
 
 
@@ -182,7 +177,6 @@ header {
 .year {
     font-family: var(--scoreboard-font);
     color: var(--mid-brown);
-    /* margin-block-end: var(--spacing-xs); */
     display: block;
 }
 
@@ -197,12 +191,6 @@ header {
 
     @media (width > 768px) {
         flex-direction: row;
-
-        /* FROM: MDN */
-        /* I needed this section to be split */
-        /* What I learned is that tktktktk...*/
-        /* .title {flex-grow: 3;}
-        .header-stats {flex-shrink: 1;} */
     }
 }
 
@@ -215,11 +203,8 @@ h4 {
     text-shadow: var(--glow-cream);
     letter-spacing: 0.70rem;
     padding: var(--spacing-xs);
-    /* background-color: var(--scoreboard-background); */
     display: inline-block;
 }
-
-
 
 
 
@@ -276,6 +261,7 @@ main {
     }
 }
 
+
 #channel-blocks {
     display: flex;
     flex-direction: row;
@@ -330,10 +316,9 @@ main {
 
     /* I wanted to add a shadow behind the cards */
     /* I found this on MDN */
-    /* It lets me add a box shadow behind my cards, so I added three */
+    /* It lets me add a box shadow behind my cards, so I added two of them */
     box-shadow:
-        0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown), 0.8rem 0.8rem 1rem rgba(0, 0, 0, 0.5)
-        ;
+        0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
 
     /* I needed to have this stuff gone */
     p, h4, figcaption {
@@ -346,8 +331,6 @@ main {
         block-size: 26rem;
         object-fit: contain;
     }
-    /* margin-block: var(--padding); */
-    /* border: solid var(--red); */
 }
 
 /* @media (width > 1250px) {
@@ -358,10 +341,6 @@ main {
     gap: 2rem;
     list-style: none;
     }
-} */
-
-/* #channel-blocks link {
-    width: calc(var(--container-width) * 40);
 } */
 
 
