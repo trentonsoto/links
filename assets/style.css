@@ -265,6 +265,18 @@ h1 {
 
 
 
+
+
+main {
+    padding-block: var(--spacing-large);
+
+    .cards {
+        overflow: hidden;
+        padding-inline: var(--spacing-large);
+    }
+}
+
+
 /* WORDBREAK ATTRIBUTION */
 /* I needed basketball to be broken up because it was too long for mobile, sizing was becoming arduous */
 /* I couldn't figure out how to do this from MDN, because I was familiar with only non breaking space*/
@@ -289,12 +301,11 @@ h1 {
 
 #channel-blocks {
     display: flex;
-    flex-direction: column;
-    /* display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    padding: calc(var(--padding) * 1/2);
-    gap: 2rem;
-    list-style: none; */
+    flex-direction: row;
+    gap: var(--spacing-medium);
+    overflow-x: auto;
+    padding-block: var(--spacing-medium);
+    padding-inline: var(--spacing-small);
 
     &.show-images {
         li {
@@ -334,11 +345,12 @@ h1 {
 }
 
 #channel-blocks li {
-    margin-block: var(--padding);
+    /* inline-size: 16rem; */
+    /* margin-block: var(--padding); */
     /* border: solid var(--red); */
 }
 
-@media (width > 1250px) {
+/* @media (width > 1250px) {
     #channel-blocks {
     display: grid;
     grid-template-columns: 3fr 3fr;
@@ -346,7 +358,7 @@ h1 {
     gap: 2rem;
     list-style: none;
     }
-}
+} */
 
 /* #channel-blocks link {
     width: calc(var(--container-width) * 40);
