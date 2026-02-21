@@ -198,8 +198,11 @@ header {
     @media (width > 768px) {
         flex-direction: row;
 
-        .title {flex-grow: 3;}
-        .header-stats {flex-shrink: 1;}
+        /* FROM: MDN */
+        /* I needed this section to be split */
+        /* What I learned is that tktktktk...*/
+        /* .title {flex-grow: 3;}
+        .header-stats {flex-shrink: 1;} */
     }
 }
 
