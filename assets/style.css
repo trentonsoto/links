@@ -322,6 +322,7 @@ main {
 }
 
 #channel-blocks li {
+    
     /* inline-size: 16rem; */
     /* margin-block: var(--padding); */
     /* border: solid var(--red); */
