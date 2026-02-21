@@ -143,7 +143,7 @@ header {
     #channel-description p{
         color: var(--light-brown);
         font-family: var(--body-font);
-        font-size: var(--body-copy);
+        font-size: calc(1.2 * var(--body-copy));
         line-height: 1.5rem;
     } 
 
@@ -218,6 +218,11 @@ h4 {
 
 
 
+
+
+
+
+/* this is all temporary */
 .text p {
     color: var(--orange);
 }
@@ -229,6 +234,10 @@ h4 {
 .image-block img{
     max-width: calc(0.4 * var(--max-width));
 }
+/* temporary */
+
+
+
 
 
 
@@ -260,7 +269,7 @@ h1 {
 /* And then I did display none, media query display inline, and it worked for mobile only */
 /* After struggling with the h1 sizing, I swapped out the variable for "vw" and it is behaving much better, so I don't think I need the wbr anymore? */
 /* I need it, I added a break point back inside the arena.js file, and now this is working */
-wbr {
+/* wbr {
     display: none;
 } 
 
@@ -268,7 +277,7 @@ wbr {
     wbr {
         display: inline;
     }
-} 
+}  */
 
 
 
