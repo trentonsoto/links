@@ -31,7 +31,7 @@
     --body-copy: 1rem;
     --small-heading-copy: calc(var(--body-copy) * 1.25);
     --label-copy: calc(var(--body-copy) * 1.75);
-    --heading-copy: 11vw;
+    --heading-copy: calc(var(--body-copy) * 4);
 
 
     /* layout */
@@ -43,10 +43,11 @@
     /* --padding: 8rem; */
     /* --container-width: 100%; */
     --court-lines: 0.2rem;
+    --max-width: 90rem;
 }
 
 body {
-    background-color: var(--scoreboard-background);
+    /* background-color: var(--scoreboard-background); */
 
     p {
         font-family: var(--body-font);
@@ -120,14 +121,23 @@ nav ul {
 header {
     padding-block: var(--spacing-large);
     padding-inline: var(--spacing-medium);
-    text-align: center;
+    max-width: var(--max-width);
+    margin-inline: auto;
+
+    .heading-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-medium);
+    }
 
     .arena-link{
-        /* margin-block-start: var(--spacing-large); */
+        margin-block-start: var(--spacing-small);
         a {
             color: var(--light-brown);
-            font-size: 2.5vw;
-            font-family: var(--body-font);
+            font-size: var(--body-copy);
+            font-family: var(--scoreboard-font);
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
             
             &:hover {
                 color: var(--orange);
@@ -139,10 +149,46 @@ header {
     #channel-description p{
         color: var(--light-brown);
         font-family: var(--body-font);
-        font-size: 2.5vw;
+        font-size: var(--body-copy);
         /* margin-block-start: var(--spacing-large); */
     } 
+
+
+     .header-stats {
+            border: solid var(--mid-brown) var(--court-lines);
+            /* background-color: var(--ink); */
+
+            .stats {
+                padding-block: var(--spacing-xs);
+                padding-inline: var(--spacing-small);
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-xs);
+
+                .heading-label {
+                    font-family: var(--scoreboard-font);
+                    font-size: calc(0.9 * var(--body-copy));
+                    color: var(--orange);
+                    letter-spacing: 0.2rem;
+                    font-weight: 700;
+                }
+
+                #channel-count, p {
+                    color: var(--light-brown);
+                    font-size: calc(2 * var(--body-copy));
+                }
+            }
+        }
 }
+
+.year {
+    font-family: var(--scoreboard-font);
+    color: var(--mid-brown);
+    /* margin-block-end: var(--spacing-xs); */
+    display: block;
+}
+
+
 
 h4 {
     font-family: var(--scoreboard-font);
@@ -171,10 +217,9 @@ h4 {
 
 h1 {
     font-family: var(--heading-font);
-    /* font-size: calc(var(--heading-copy) * 0.9); */
     font-size: var(--heading-copy);
     color: var(--orange);
-    text-align: center;
+    /* text-align: center; */
     line-height: 1;
     /* I wanted to add background shadows to make it feel like a basketball */
     /* I found text shadow on MDN */
