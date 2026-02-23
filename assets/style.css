@@ -396,7 +396,6 @@ main {
     /* I learned that the before and after can only target the first child of the element */
     &::before {
         content:'1998 SERIES';
-        counter-increment: card-number;
         position: absolute;
         font-family: var(--scoreboard-font);
         font-size: calc(0.75 * var(--body-copy));
