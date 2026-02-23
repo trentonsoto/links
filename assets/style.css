@@ -123,7 +123,7 @@ header {
         margin-block-start: var(--spacing-small);
         a {
             color: var(--light-brown);
-            font-size: var(--body-copy);
+            font-size: calc(0.85 * var(--body-copy));
             font-family: var(--scoreboard-font);
             text-decoration: underline;
             text-underline-offset: 0.5rem;
@@ -135,6 +135,10 @@ header {
         }
     }
     
+    #channel-description {
+        padding: 0;
+        margin: 0;
+    }
     #channel-description p{
         color: var(--light-brown);
         font-family: var(--body-font);
@@ -146,6 +150,7 @@ header {
      .header-stats {
             border: solid var(--mid-brown) var(--court-lines);
             background-color: var(--ink);
+            max-width: calc(0.3 * var(--max-width));
 
             .stats {
                 padding-block: var(--spacing-xs);
@@ -160,15 +165,15 @@ header {
 
                 .heading-label {
                     font-family: var(--scoreboard-font);
-                    font-size: calc(0.9 * var(--body-copy));
+                    font-size: calc(0.7 * var(--body-copy));
                     color: var(--orange);
-                    letter-spacing: 0.2rem;
+                    letter-spacing: 0.25rem;
                     font-weight: 700;
                 }
 
                 #channel-count, p {
                     color: var(--light-brown);
-                    font-size: calc(2 * var(--body-copy));
+                    font-size: calc(1.2 * var(--body-copy));
                 }
             }
         }
@@ -178,6 +183,8 @@ header {
     font-family: var(--scoreboard-font);
     color: var(--mid-brown);
     display: block;
+    font-size: calc(0.70 * var(--body-copy));
+    letter-spacing: 0.25rem;
 }
 
 
@@ -253,7 +260,7 @@ h1 {
 
 
 main {
-    padding-block: var(--spacing-large);
+    padding-block: var(--spacing-small); 
 
     .cards {
         overflow: hidden;
