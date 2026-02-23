@@ -351,8 +351,11 @@ main {
     filter: sepia(0.2) contrast(1);
     /* from MDN */
     /* I wanted the cards to have a vintage look, so I added a sepia filter */
-
-
+    transition: box-shadow 0.3s ease;
+    &:hover {
+        box-shadow: 
+            0.3rem 0.8rem 0 var(--dark-brown), 0.5rem 1.1rem 0 var(--mid-brown);
+    }
 
     /* I needed to have this stuff gone */
     p, h4, figcaption {
