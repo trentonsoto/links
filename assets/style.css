@@ -366,8 +366,8 @@ main {
    
     
 
-    &::before {
-        content: counter(card-number, upper-roman) ' 1998 SERIES';
+    &::after {
+        content: counter(card-number, upper-roman);
         /* this displays the current counter value, using the content property of the before psudo-element of each list item*/
         /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
         counter-increment: card-number;
@@ -380,8 +380,21 @@ main {
         font-size: calc(0.75 * var(--body-copy));
         font-weight: 700;
         color: var(--light-brown);
-        inset-block-end: var(--spacing-xs);
-        inset-inline-end: var(--spacing-xs);
+        inset-block-end: calc(1.25 * var(--spacing-xs));
+        inset-inline-end: var(--spacing-small);
+    }
+    /* I wasn't sure why I couldn't get the before pseudo-element to work for two items */
+    /* I learned that the before and after can only target the first child of the element */
+    &::before {
+        content:'1998 SERIES';
+        counter-increment: card-number;
+        position: absolute;
+        font-family: var(--scoreboard-font);
+        font-size: calc(0.75 * var(--body-copy));
+        font-weight: 700;
+        color: var(--light-brown);
+        inset-block-end: calc(1.25 * var(--spacing-xs));
+        inset-inline-start: var(--spacing-small);
     }
 }
 
