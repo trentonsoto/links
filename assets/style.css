@@ -366,15 +366,23 @@ main {
     }
 
     /* I needed to have this stuff gone */
-    /* p, h4, figcaption {
+    p, h4, figcaption {
         display: none;
-    } */
-
-    figure, iframe, picture, img {
-        width: 100%;
-        height: 0%;
-        display: block;
     }
+
+    figure, iframe, video {
+    width: 100%;
+    height: calc(24 * var(--spacing-small));
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+    picture, img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
 
     /* ask if there is a way to get whatever is figure to not scale to fit */
 
