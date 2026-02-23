@@ -26,25 +26,31 @@ let renderBlock = (blockData) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
 
+	// I wanted to make a shared template literal for the info that goes with every block, to avoid repetition
+	// I used Claude to help me understand how to do this, and it was very helpful
+	// I moved all my figcaptions and descriptions into this shared template literal, and it worked
+	// Clause helped me with the bottom link "View on Are.na"
+	// I haven't done this for text blocks yet
+	let sharedInfo = `
+    <h4>${ blockData.title || '' }</h4>
+    <p>${ blockData.description?.html || '' }</p>
+    <p><a href="https://www.are.na/block/${ blockData.id }">View on Are.na ↗</a></p>
+	`
+
 	// Links!
 	if (blockData.type == 'Link') {
 		// Declares a “template literal” of the dynamic HTML we want.
 		let linkItem =
 			`
 			<li class="link-block">
-				<p><em>Link</em></p>
 				<figure>
 					<picture>
 						<source media="(width < 500px)" srcset="${ blockData.image.small.src_2x }">
 						<source media="(width < 1000px)" srcset="${ blockData.image.medium.src_2x }">
 						<img alt="${blockData.image.alt_text}" src="${ blockData.image.large.src_2x }">
 					</picture>
-					<figcaption>
-						<h4>${ blockData.title }</h4>
-						${ blockData.description.html }
-					</figcaption>
 				</figure>
-				<p><a href="${ blockData.source.url }">See the original ↗</a></p>
+				${ sharedInfo }
 			</li>
 			`
 
@@ -66,11 +72,8 @@ let renderBlock = (blockData) => {
                     <source media="(width < 1000px)" srcset="${blockData.image.medium.src_2x}">
                     <img alt="${blockData.image.alt_text}" src="${blockData.image.large.src_2x}">
                 </picture>
-				<figcaption>
-					<h4>${ blockData.title }</h4>
-					<p>${ blockData.description?.html }</p>
-				</figcaption>
             </figure>
+			${ sharedInfo }
         </li>
         `
         channelBlocks.insertAdjacentHTML('beforeend', imageItem)
@@ -105,9 +108,9 @@ let renderBlock = (blockData) => {
 			let videoItem =
 				`
 				<li class="video-block">
-					<p><em>Video</em></p>
 					<h4>${blockData.title}</h4>
 					<video controls src="${ blockData.attachment.url }"></video>
+					${ sharedInfo }
 				</li>
 				`
 
@@ -129,7 +132,8 @@ let renderBlock = (blockData) => {
 				`
 				<li>
 					<p><em>Audio</em></p>
-					<audio controls src="${ blockData.attachment.url }"></video>
+					<audio controls src="${ blockData.attachment.url }"></audio>
+					${ sharedInfo }
 				</li>
 				`
 
@@ -150,10 +154,8 @@ let renderBlock = (blockData) => {
 			let linkedVideoItem =
 				`
 				<li class="linked-video-block">
-					<p><em>Linked Video</em></p>
 					${ blockData.embed.html }
-					<h4>${blockData.title || ''}</h4>
-					${ blockData.description?.html }
+					${ sharedInfo }
 				</li>
 				`
 
