@@ -89,9 +89,10 @@ let renderBlock = (blockData) => {
         let textItem =
 			`
 			<li class="text-block">
-			<span class="card-title">${blockData.title}</span>
+			<span class="text-card-title">${blockData.title}</span>
 				<div class="text">
 					<p>${ blockData.content.html }</p>
+					${ sharedInfo }
 					<p>${ blockData.description?.html }</p>
 				</div>
 			</li>
