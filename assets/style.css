@@ -280,6 +280,9 @@ main {
     overflow-x: auto;
     padding-block: var(--spacing-medium);
     padding-inline: var(--spacing-small);
+    scrollbar-color: var(--mid-brown) transparent;
+    scrollbar-width: thin;
+    cursor: pointer;
 
     &.show-images {
         li {
