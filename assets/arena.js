@@ -32,9 +32,11 @@ let renderBlock = (blockData) => {
 	// Clause helped me with the bottom link "View on Are.na"
 	// I haven't done this for text blocks yet
 	let sharedInfo = `
-    <h4>${ blockData.title || '' }</h4>
-    <p>${ blockData.description?.html || '' }</p>
-    <p><a href="https://www.are.na/block/${ blockData.id }">View on Are.na ↗</a></p>
+		<div class="card-info">
+    		<h4 class="card-title">${ blockData.title || '' }</h4>
+   			<p class="card-description">${ blockData.description?.html || '' }</p>
+    		<p class="card-link"><a href="https://www.are.na/block/${ blockData.id }">View on Are.na ↗</a></p>
+		</div>
 	`
 
 	// Links!
