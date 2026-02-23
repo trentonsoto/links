@@ -381,11 +381,11 @@ main {
     }
 
     picture, img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
    
 
     &::after {
@@ -465,6 +465,13 @@ main {
     }
 }
 
+.text-card-title {
+    font-family: var(--scoreboard-font);
+    font-size: var(--label-copy);
+    color: var(--red);
+    padding: var(--spacing-small) var(--spacing-small);
+    text-transform: uppercase;
+}
 
 
 /* @media (width > 1250px) {
