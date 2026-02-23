@@ -30,3 +30,9 @@ showTextButton.addEventListener('click', () => {
     channelBlocks.classList.remove('show-links', 'show-images', 'show-videos')
     channelBlocks.classList.add('show-text')
 })
+
+
+let overlay = document.querySelector('#opencard')
+
+let openCard = 
+
