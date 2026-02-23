@@ -325,6 +325,14 @@ main {
     }
 }
 
+@media (width > 1250px) {
+    #channel-blocks {
+    display: grid;
+    grid-template-rows: repeat(2, 27rem);
+    grid-auto-flow: column;
+    }
+}
+
 #channel-blocks li {
     min-width: calc(16 * var(--spacing-small));
     width: calc(16 * var(--spacing-small));
