@@ -371,11 +371,14 @@ main {
     }
 
     figure, iframe, video {
-    width: 100%;
-    height: calc(24 * var(--spacing-small));
-    flex-shrink: 0;
-    overflow: hidden;
-}
+        width: 100%;
+        height: calc(24 * var(--spacing-small));
+        flex-shrink: 0;
+        /* I needed the thumbnails to not shrink to the card info below it */
+        /* Found on MDN */
+        /* Without it, the thumbnails would shrink, and cannot get longer*/
+        overflow: hidden;
+    }
 
     picture, img {
     width: 100%;
@@ -383,12 +386,7 @@ main {
     display: block;
     object-fit: cover;
 }
-
-    /* ask if there is a way to get whatever is figure to not scale to fit */
-
    
-   
-    
 
     &::after {
         content: counter(card-number, upper-roman);
