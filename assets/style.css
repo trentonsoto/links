@@ -322,6 +322,9 @@ main {
     /* I found this on MDN */
     /* It lets me add a box shadow behind my cards, so I added two of them */
     box-shadow: 0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
+    filter: sepia(0.2) contrast(1);
+    /* from MDN */
+    /* I wanted the cards to have a vintage look, so I added a sepia filter */
 
 
 
@@ -337,7 +340,7 @@ main {
         object-fit: contain;
     }
 
-    
+   
     
 
     &::before {
@@ -348,6 +351,7 @@ main {
         /* tells when the counter should increase and decrease, and by how much */
         /* I won't specify a value */
         /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
+        /* https://www.youtube.com/watch?v=hDg7yuHXBm4 */
         position: absolute;
         font-family: var(--scoreboard-font);
         font-size: calc(0.75 * var(--body-copy));
