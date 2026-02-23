@@ -350,6 +350,8 @@ main {
     overflow: hidden;
     position: relative;
     border-block-start: solid var(--orange) calc(3 * var(--court-lines));
+    display: flex;
+    flex-direction: column;
     /* I wanted to add a shadow behind the cards */
     /* I found this on MDN */
     /* It lets me add a box shadow behind my cards, so I added two of them */
@@ -376,11 +378,7 @@ main {
 
     /* ask if there is a way to get whatever is figure to not scale to fit */
 
-    .card-title {
-        font-family: var(--scoreboard-font);
-        font-size: var(--body-copy);
-        color: var(--dark-brown);
-    }
+   
    
     
 
@@ -412,6 +410,52 @@ main {
         color: var(--light-brown);
         inset-block-end: calc(1.25 * var(--spacing-xs));
         inset-inline-start: var(--spacing-small);
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-small) var(--spacing-small);
+        /* padding-block-end: calc(1.25 * var(--spacing-small)); */
+        overflow-y: auto;
+        max-height: calc(23 * var(--spacing-small));
+        scrollbar-width: thin;
+
+        .card-title {
+            font-family: var(--scoreboard-font);
+            font-size: calc(0.85 * var(--body-copy));
+            color: var(--orange);
+            letter-spacing: 0.02rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0;
+            overflow: hidden;
+            min-height: fit-content;
+            /* I needed to figure out why a few titles weren't showing up, the dev tools said it had a 0 height */
+            text-overflow: ellipsis;
+            /* I needed long titles to be truncated */
+        }
+
+        .card-description {
+            font-family: var(--body-font);
+            font-size: calc(0.85 * var(--body-copy));
+            color: var(--orange) !important;
+            line-height: 1.5;
+        }
+
+        .card-link a {
+            font-family: var(--scoreboard-font);
+            font-size: calc(0.85 * var(--body-copy));
+            color: var(--dark-brown);
+            text-decoration: underline;
+            text-underline-offset: 0.3rem;
+
+            &:hover {
+                color: var(--orange);
+                font-weight: 700;
+            }
+        }
     }
 }
 
