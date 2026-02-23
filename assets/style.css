@@ -326,8 +326,12 @@ main {
 }
 
 #channel-blocks li {
-    min-width: 16rem;
-    width: 16rem;
+    min-width: calc(16 * var(--spacing-small));
+    width: calc(16 * var(--spacing-small));
+    height: calc(27 * var(--spacing-small));
+    /* padding: 0; */
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    box-sizing: border-box;
     background-color: var(--cream);
     border-radius: 0.3rem;
     overflow: hidden;
@@ -347,18 +351,22 @@ main {
         display: none;
     }
 
-    img {
+    figure, iframe, picture, img {
+        width: 100%;
+        height: 100%;
         display: block;
-        inline-size: 100%;
-        block-size: 26rem;
-        object-fit: contain;
     }
 
+    .card-title {
+        font-family: var(--scoreboard-font);
+        font-size: var(--body-copy);
+        color: var(--dark-brown);
+    }
    
     
 
     &::before {
-        content: counter(card-number, upper-roman);
+        content: counter(card-number, upper-roman) ' 1998 SERIES';
         /* this displays the current counter value, using the content property of the before psudo-element of each list item*/
         /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
         counter-increment: card-number;
