@@ -152,7 +152,7 @@ let renderBlock = (blockData) => {
 				<li class="linked-video-block">
 					<p><em>Linked Video</em></p>
 					${ blockData.embed.html }
-					<h4>${blockData.title}</h4>
+					<h4>${blockData.title || ''}</h4>
 					${ blockData.description?.html }
 				</li>
 				`
