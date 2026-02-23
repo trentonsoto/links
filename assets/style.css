@@ -329,8 +329,7 @@ main {
     min-width: calc(16 * var(--spacing-small));
     width: calc(16 * var(--spacing-small));
     height: calc(27 * var(--spacing-small));
-    /* padding: 0; */
-    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 0rem 0rem calc(2.5 *var(--spacing-small)) 0rem;
     box-sizing: border-box;
     background-color: var(--cream);
     border-radius: 0.3rem;
@@ -356,6 +355,8 @@ main {
         height: 100%;
         display: block;
     }
+
+    /* ask if there is a way to get whatever is figure to not scale to fit */
 
     .card-title {
         font-family: var(--scoreboard-font);
