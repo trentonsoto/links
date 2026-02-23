@@ -45,14 +45,16 @@ let renderBlock = (blockData) => {
 		let linkItem =
 			`
 			<li class="link-block">
-				<figure>
+				<figure class="card-front">
 					<picture>
 						<source media="(width < 500px)" srcset="${ blockData.image.small.src_2x }">
 						<source media="(width < 1000px)" srcset="${ blockData.image.medium.src_2x }">
 						<img alt="${blockData.image.alt_text}" src="${ blockData.image.large.src_2x }">
 					</picture>
 				</figure>
-				${ sharedInfo }
+				<div class="card-back">
+					${ sharedInfo }
+				</div>
 			</li>
 			`
 
@@ -68,14 +70,16 @@ let renderBlock = (blockData) => {
 		let imageItem =
         `
         <li class="image-block">
-            <figure>
+            <figure class="card-front">
                 <picture>
                     <source media="(width < 500px)" srcset="${blockData.image.small.src_2x}">
                     <source media="(width < 1000px)" srcset="${blockData.image.medium.src_2x}">
                     <img alt="${blockData.image.alt_text}" src="${blockData.image.large.src_2x}">
                 </picture>
             </figure>
-			${ sharedInfo }
+			<div class="card-back">
+				${ sharedInfo }
+			</div>
         </li>
         `
         channelBlocks.insertAdjacentHTML('beforeend', imageItem)
@@ -111,9 +115,13 @@ let renderBlock = (blockData) => {
 			let videoItem =
 				`
 				<li class="video-block">
-					<h4>${blockData.title}</h4>
-					<video controls src="${ blockData.attachment.url }"></video>
-					${ sharedInfo }
+					<div class="card-front">
+						<h4>${blockData.title}</h4>
+						<video controls src="${ blockData.attachment.url }"></video>
+					</div>
+					<div class="card-back">
+						${ sharedInfo }
+					</div>
 				</li>
 				`
 
@@ -134,9 +142,13 @@ let renderBlock = (blockData) => {
 			let audioItem =
 				`
 				<li>
-					<p><em>Audio</em></p>
-					<audio controls src="${ blockData.attachment.url }"></audio>
-					${ sharedInfo }
+					<div class="card-front">
+						<p><em>Audio</em></p>
+						<audio controls src="${ blockData.attachment.url }"></audio>
+					</div>
+					<div class="card-back">
+						${ sharedInfo }
+					</div>
 				</li>
 				`
 
@@ -157,8 +169,12 @@ let renderBlock = (blockData) => {
 			let linkedVideoItem =
 				`
 				<li class="linked-video-block">
-					${ blockData.embed.html }
-					${ sharedInfo }
+					<div class="card-front">
+						${ blockData.embed.html }
+					</div>
+					<div class="card-back">
+						${ sharedInfo }
+					</div>
 				</li>
 				`
 
