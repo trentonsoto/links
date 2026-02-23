@@ -269,6 +269,10 @@ main {
     .cards {
         overflow: hidden;
         padding-inline: var(--spacing-large);
+
+        @media (width < 500px) {
+            padding-inline: var(--spacing-medium);
+        }
     }
 }
 
