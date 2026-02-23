@@ -263,6 +263,10 @@ main {
 
 
 #channel-blocks {
+    counter-reset: card-number;
+    /* this initializes the custom counter */
+    /* I am starting it at #1, so I won't specify a value  */
+    /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
     display: flex;
     flex-direction: row;
     gap: var(--spacing-medium);
@@ -313,12 +317,13 @@ main {
     background-color: var(--cream);
     border-radius: 0.3rem;
     overflow: hidden;
-
+    position: relative;
     /* I wanted to add a shadow behind the cards */
     /* I found this on MDN */
     /* It lets me add a box shadow behind my cards, so I added two of them */
-    box-shadow:
-        0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
+    box-shadow: 0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
+
+
 
     /* I needed to have this stuff gone */
     p, h4, figcaption {
@@ -331,7 +336,29 @@ main {
         block-size: 26rem;
         object-fit: contain;
     }
+
+    
+    
+
+    &::before {
+        content: counter(card-number, upper-roman);
+        /* this displays the current counter value, using the content property of the before psudo-element of each list item*/
+        /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
+        counter-increment: card-number;
+        /* tells when the counter should increase and decrease, and by how much */
+        /* I won't specify a value */
+        /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
+        position: absolute;
+        font-family: var(--scoreboard-font);
+        font-size: calc(0.75 * var(--body-copy));
+        font-weight: 700;
+        color: var(--light-brown);
+        inset-block-end: var(--spacing-xs);
+        inset-inline-end: var(--spacing-xs);
+    }
 }
+
+
 
 /* @media (width > 1250px) {
     #channel-blocks {
