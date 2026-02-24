@@ -31,6 +31,19 @@ showTextButton.addEventListener('click', () => {
     channelBlocks.classList.add('show-text')
 })
 
+// from week 17 class site
+let modal = document.querySelector('#card-modal')
+let modalContent = document.querySelector('#modal-content')
+let closeButton = document.querySelector('#close-modal')
 
-let overlay = document.querySelector('#opencard')
-
+channelBlocks.addEventListener('click', (event) => {
+    let card = event.target.closest('#channel-blocks li')
+    let info = card.querySelector('.card-info')
+    
+    // used innerHTML from inspiration from the arena.js file 
+    modalContent.innerHTML = info.innerHTML
+    modal.showModal()
+})
+closeButton.addEventListener('click', () => {
+    modal.close()
+})
