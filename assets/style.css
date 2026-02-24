@@ -340,7 +340,7 @@ main {
 }
 
 #channel-blocks li {
-    min-width: calc(16 * var(--spacing-small));
+    /* min-width: calc(16 * var(--spacing-small)); */
     width: calc(16 * var(--spacing-small));
     height: calc(27 * var(--spacing-small));
     padding: 0rem 0rem calc(2.5 *var(--spacing-small)) 0rem;
@@ -472,3 +472,21 @@ main {
     padding: var(--spacing-small) var(--spacing-small);
     text-transform: uppercase;
 }
+
+
+#card-modal {
+    background-color: var(--cream);
+    border: solid var(--orange) var(--court-lines);
+    border-radius: 0.3rem;
+    padding: var(--spacing-small);
+    width: calc(20 * var(--spacing-small));
+    box-shadow: 0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
+    filter: sepia(0.2) contrast(1);
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    &::backdrop {
+        background-color: rgba(12, 5, 0, 0.85);
+    }
+}
+
