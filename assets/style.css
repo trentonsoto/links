@@ -331,16 +331,16 @@ main {
     }
 }
 
-@media (width > 1250px) {
+@media (width > 768px) {
     #channel-blocks {
-    display: grid;
-    grid-template-rows: repeat(2, 27rem);
-    grid-auto-flow: column;
+        display: grid;
+        grid-template-rows: repeat(2, 27rem);
+        grid-auto-flow: column;
     }
 }
 
 #channel-blocks li {
-    /* min-width: calc(16 * var(--spacing-small)); */
+    min-width: calc(16 * var(--spacing-small));
     width: calc(16 * var(--spacing-small));
     height: calc(27 * var(--spacing-small));
     padding: 0rem 0rem calc(2.5 *var(--spacing-small)) 0rem;
