@@ -187,6 +187,18 @@ let renderBlock = (blockData) => {
 		// Linked audio!
 		else if (embedType.includes('rich')) {
 			// …up to you!
+			let richItem = 
+			`
+			<li class="linked-video-block">
+				<div class="card-front">
+					${ blockData.embed.html }
+				</div>
+				<div class="card-back">
+					${ sharedInfo }
+				</div>
+			</li>
+			`
+			channelBlocks.insertAdjacentHTML('beforeend', richItem)
 		}
 	}
 }

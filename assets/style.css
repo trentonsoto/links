@@ -316,7 +316,7 @@ main {
         li {
             display: none;
         }
-        li.linked-video-block {
+        li.linked-video-block, li.rich-block {
             display: block;
         }
     }
