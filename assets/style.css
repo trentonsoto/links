@@ -484,6 +484,7 @@ main {
     filter: sepia(0.2) contrast(1);
     position: fixed;
     margin: auto;
+    max-height: 60%;
     inset: 0;
     &::backdrop {
         background-color: rgba(12, 5, 0, 0.85);
@@ -492,13 +493,18 @@ main {
 
 #close-modal {
     font-family: var(--scoreboard-font);
-    font-size: var(--body-copy);
+    font-size: calc(2 * var(--body-copy));
     color: var(--light-brown);
     padding: var(--spacing-xs);
     margin-inline-start: auto;
     margin-block-end: var(--spacing-xs);
     display: block;
     cursor: pointer;
+    position: absolute;
+    /* left: 50%; */
+    inset-block-end: var(--spacing-xs);
+    /* text-align: center; */
+    /* inset-inline-end: var(--spacing-xs); */
 
     &:hover {
         color: var(--orange);
