@@ -490,3 +490,19 @@ main {
     }
 }
 
+#close-modal {
+    font-family: var(--scoreboard-font);
+    font-size: var(--body-copy);
+    color: var(--light-brown);
+    padding: var(--spacing-xs);
+    margin-inline-start: auto;
+    margin-block-end: var(--spacing-xs);
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--orange);
+        /* text-shadow: var(--glow-orange); */
+    }
+}
+
