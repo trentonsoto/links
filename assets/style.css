@@ -506,3 +506,42 @@ main {
     }
 }
 
+
+#modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+
+     .card-title {
+        font-family: var(--scoreboard-font);
+        font-size: calc(0.85 * var(--body-copy));
+        color: var(--orange);
+        letter-spacing: 0.02rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        min-height: fit-content;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .card-description {
+        font-family: var(--body-font);
+        font-size: calc(0.85 * var(--body-copy));
+        color: var(--orange);
+        line-height: 1.5;
+    }
+
+    .card-link a {
+        font-family: var(--scoreboard-font);
+        font-size: calc(0.85 * var(--body-copy));
+        color: var(--dark-brown);
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+
+        &:hover {
+            color: var(--orange);
+            font-weight: 700;
+        }
+    }
+}
+
