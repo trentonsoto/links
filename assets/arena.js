@@ -34,7 +34,7 @@ let renderBlock = (blockData) => {
 	let sharedInfo = `
 		<div class="card-info">
     		<h4 class="card-title">${ blockData.title || '' }</h4>
-   			<p class="card-description">${ blockData.description?.html || '' }</p>
+   			<div class="card-description">${ blockData.description?.html || '' }</div>
     		<p class="card-link"><a href="https://www.are.na/block/${ blockData.id }">View on Are.na ↗</a></p>
 		</div>
 	`
