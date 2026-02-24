@@ -34,5 +34,3 @@ showTextButton.addEventListener('click', () => {
 
 let overlay = document.querySelector('#opencard')
 
-let openCard = 
-
