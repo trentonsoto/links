@@ -94,7 +94,7 @@ nav ul {
 
     &.active {
         color: var(--orange);
-        text-shadow: var(--glow-orange);
+        /* text-shadow: var(--glow-orange); */
         /* border-color: var(--orange); */
     }
 }
