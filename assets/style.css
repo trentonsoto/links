@@ -414,6 +414,17 @@ main {
     }
 }
 
+@media (width < 768px) {
+    #channel-blocks li {
+        figure, iframe, video {
+            transition: transform 0.3s ease-in-out;
+        }
+        picture, img {
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+}
+
 .text-card-title {
     font-family: var(--scoreboard-font);
     font-size: var(--label-copy);
