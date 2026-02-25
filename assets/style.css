@@ -451,6 +451,7 @@ main {
     padding: 0;
     padding-block-end: var(--spacing-small);
     background-color: var(--cream);
+    width: 100%;
     &:hover {
         color: var(--orange);
         font-weight: 700;
