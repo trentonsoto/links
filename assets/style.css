@@ -442,13 +442,14 @@ main {
     font-size: calc(2 * var(--body-copy));
     color: var(--light-brown);
     padding: var(--spacing-xs);
-    margin-inline-start: auto;
-    margin-block-end: var(--spacing-xs);
+    /* margin-inline-start: auto; */
+    margin-block-start: var(--spacing-xs);
     display: block;
     cursor: pointer;
-    position: absolute;
-    inset-block-end: var(--spacing-xs);
-
+    position: sticky;
+    inset-block-start: var(--spacing-xs);
+    padding: 0;
+    padding-block-end: var(--spacing-small);
     &:hover {
         color: var(--orange);
         font-weight: 700;
