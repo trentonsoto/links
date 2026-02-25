@@ -476,13 +476,13 @@ main {
     display: block;
     cursor: pointer;
     position: sticky;
+    padding: 0;
     /* inset-block-start: var(--spacing-xs); */
     inset-block-start: 0;
     padding-block-start: var(--spacing-small);
     /* I was having trouble getting the modal close button to hide the text behind it */
     /* Claude said to remove inset-block-start and make it 0 */
     /* this was leaving a gap where the text can show */
-    padding: 0;
     padding-block-end: var(--spacing-small);
     background-color: var(--cream);
     width: 100%;
