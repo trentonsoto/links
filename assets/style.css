@@ -450,6 +450,7 @@ main {
     inset-block-start: var(--spacing-xs);
     padding: 0;
     padding-block-end: var(--spacing-small);
+    background-color: var(--cream);
     &:hover {
         color: var(--orange);
         font-weight: 700;
