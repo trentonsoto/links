@@ -84,17 +84,18 @@ nav ul {
     color: var(--nav-light);
     padding-block: var(--spacing-xs);
     padding-inline: var(--spacing-small);
-    border: var(--orange) solid transparent;
+    /* border: var(--orange) solid transparent; */
 
     &:hover {
         color: var(--orange);
-        text-shadow: var(--glow-orange);
+        /* text-shadow: var(--glow-orange); */
+        /* i no longer need this */
     }
 
     &.active {
         color: var(--orange);
         text-shadow: var(--glow-orange);
-        border-color: var(--orange);
+        /* border-color: var(--orange); */
     }
 }
 
@@ -118,6 +119,7 @@ header {
     padding-inline: var(--spacing-medium);
     max-width: var(--max-width);
     margin-inline: auto;
+    /* centers my header */
 
     .arena-link{
         margin-block-start: var(--spacing-small);
@@ -130,7 +132,7 @@ header {
             
             &:hover {
                 color: var(--orange);
-                text-shadow: var(--glow-orange);
+                /* text-shadow: var(--glow-orange); */
             }
         }
     }
@@ -138,51 +140,54 @@ header {
     #channel-description {
         padding: 0;
         margin: 0;
-    }
-    #channel-description p{
-        color: var(--light-brown);
-        font-family: var(--body-font);
-        font-size: calc(1.2 * var(--body-copy));
-        line-height: 1.5rem;
+
+        p {
+            color: var(--light-brown);
+            font-family: var(--body-font);
+            font-size: calc(1.2 * var(--body-copy));
+            line-height: 1.5rem;
+        }
     } 
 
 
-     .header-stats {
-            border: solid var(--mid-brown) var(--court-lines);
-            background-color: var(--ink);
-            max-width: calc(0.3 * var(--max-width));
+    .header-stats {
+        border: solid var(--mid-brown) var(--court-lines);
+        background-color: var(--ink);
+        max-width: calc(0.3 * var(--max-width));
 
-            .stats {
-                padding-block: var(--spacing-xs);
-                padding-inline: var(--spacing-small);
-                display: flex;
-                flex-direction: column;
-                gap: var(--spacing-xs);
-                border-block-end: solid var(--mid-brown) var(--court-lines);
-                &:last-child {
-                    border-block-end: 0;
-                }
+        .stats {
+            padding-block: var(--spacing-xs);
+            padding-inline: var(--spacing-small);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            border-block-end: solid var(--mid-brown) var(--court-lines);
+            &:last-child {
+                /* come back to this */
+                /* i can't figure out why there is this extra space under "About" section */
+                 border-block-end: 0;
+            }
 
-                .heading-label {
-                    font-family: var(--scoreboard-font);
-                    font-size: calc(0.7 * var(--body-copy));
-                    color: var(--orange);
-                    letter-spacing: 0.25rem;
-                    font-weight: 700;
-                }
+            .heading-label {
+                font-family: var(--scoreboard-font);
+                font-size: calc(0.7 * var(--body-copy));
+                color: var(--orange);
+                letter-spacing: 0.25rem;
+                font-weight: 700;
+            }
 
-                #channel-count, p {
-                    color: var(--light-brown);
-                    font-size: calc(1.2 * var(--body-copy));
-                }
+            #channel-count, p {
+                color: var(--light-brown);
+                font-size: calc(1.2 * var(--body-copy));
             }
         }
+    }
 }
 
 .year {
     font-family: var(--scoreboard-font);
     color: var(--mid-brown);
-    display: block;
+    /* display: block; */
     font-size: calc(0.70 * var(--body-copy));
     letter-spacing: 0.25rem;
 }
@@ -210,34 +215,8 @@ h4 {
     text-shadow: var(--glow-cream);
     letter-spacing: 0.70rem;
     padding: var(--spacing-xs);
-    display: inline-block;
+    /* display: inline-block; */
 }
-
-
-
-
-
-/* this is all temporary */
-.text p {
-    color: var(--orange);
-}
-
-.text-block h4 {
-    display: block;
-}
-
-.image p {
-    color: var(--orange);
-}
-
-.image-block img{
-    max-width: calc(0.4 * var(--max-width));
-}
-/* temporary */
-
-
-
-
 
 
 h1 {
@@ -249,8 +228,8 @@ h1 {
     /* I found text shadow on MDN */
     /* The way I wrote it is color, x offset, y offset, blur radius */
     text-shadow: var(--dark-brown) 0.1rem 0.1rem 0, var(--red) 0.2rem 0.2rem;
-   
 }
+
 @media (width < 768px) {
     h1 {
         font-size: calc(0.7 * var(--heading-copy));
@@ -293,7 +272,9 @@ main {
     scrollbar-color: var(--mid-brown) transparent;
     scrollbar-width: thin;
     cursor: pointer;
+    /* I love this cursor thing */
 
+    /* everything below is from Loom */
     &.show-images {
         li {
             display: none;
@@ -340,11 +321,11 @@ main {
 }
 
 #channel-blocks li {
+    /* min-width helps me stop the card from becoming too small */
+    /* without it, my cards look extremely thin and weird */
     min-width: calc(16 * var(--spacing-small));
-    width: calc(16 * var(--spacing-small));
     height: calc(27 * var(--spacing-small));
     padding: 0rem 0rem calc(2.5 *var(--spacing-small)) 0rem;
-    box-sizing: border-box;
     background-color: var(--cream);
     border-radius: 0.3rem;
     overflow: hidden;
@@ -374,7 +355,8 @@ main {
         width: 100%;
         height: calc(24 * var(--spacing-small));
         flex-shrink: 0;
-        /* I needed the thumbnails to not shrink to the card info below it */
+        /* I needed the thumbnails to not shrink to the card info below it, or smaller than its set height */
+        /* I need the thumbnail the same size */
         /* Found on MDN */
         /* Without it, the thumbnails would shrink, and cannot get longer*/
         overflow: hidden;
@@ -383,7 +365,7 @@ main {
     picture, img {
         width: 100%;
         height: 100%;
-        display: block;
+        /* display: block; */
         object-fit: cover;
     }
    
@@ -393,15 +375,18 @@ main {
         /* this displays the current counter value, using the content property of the before psudo-element of each list item*/
         /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
         counter-increment: card-number;
+        position: absolute;
         /* tells when the counter should increase and decrease, and by how much */
         /* I won't specify a value */
         /* this is from a youtube video, because I wasn't entirely sure how exactly counters work */
         /* https://www.youtube.com/watch?v=hDg7yuHXBm4 */
-        position: absolute;
         font-family: var(--scoreboard-font);
         font-size: calc(0.75 * var(--body-copy));
         font-weight: 700;
         color: var(--light-brown);
+        /* places to the bottom of the card for me */
+        /* places to the right of the card for me */
+        /* MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/inset-block-end */
         inset-block-end: calc(1.25 * var(--spacing-xs));
         inset-inline-end: var(--spacing-small);
     }
@@ -433,13 +418,18 @@ main {
     border: solid var(--orange) var(--court-lines);
     border-radius: 0.3rem;
     padding: var(--spacing-small);
-    width: calc(20 * var(--spacing-small));
+    max-width: calc(20 * var(--spacing-small));
     box-shadow: 0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
     filter: sepia(0.2) contrast(1);
+    /* this helps the modal stay centered as I scroll */
+    /* removing this makes it not visible when scrolled down */
     position: fixed;
+    /* MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/inset */
+    /* I need to use both margin:auto with inset:0 */
+    /* this helps me to center it in the screen! */
     margin: auto;
-    max-height: 60%;
     inset: 0;
+    max-height: 60%;
     overflow-y: auto;
     &::backdrop {
         background-color: rgba(12, 5, 0, 0.65);
@@ -456,15 +446,11 @@ main {
     display: block;
     cursor: pointer;
     position: absolute;
-    /* left: 50%; */
     inset-block-end: var(--spacing-xs);
-    /* text-align: center; */
-    /* inset-inline-end: var(--spacing-xs); */
 
     &:hover {
         color: var(--orange);
         font-weight: 700;
-        /* text-shadow: var(--glow-orange); */
     }
 }
 
@@ -482,7 +468,8 @@ main {
         letter-spacing: 0.02rem;
         font-weight: 700;
         text-transform: uppercase;
-        min-height: fit-content;
+        /* some of my titles had 0 height */
+        /* min-height: fit-content; */
         padding: 0;
         overflow: hidden;
     }
