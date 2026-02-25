@@ -36,14 +36,23 @@ let modal = document.querySelector('#card-modal')
 let modalContent = document.querySelector('#modal-content')
 let closeButton = document.querySelector('#close-modal')
 
-channelBlocks.addEventListener('click', (event) => {
+channelBlocks.addEventListener('click', (event) => { // “Listen” for clicks.
     let card = event.target.closest('#channel-blocks li')
     let info = card.querySelector('.card-info')
     
-    // used innerHTML from inspiration from the arena.js file 
+    // used innerHTML from the arena.js file 
+    // 
     modalContent.innerHTML = info.innerHTML
-    modal.showModal()
+    modal.showModal() // This opens it up.
 })
+
 closeButton.addEventListener('click', () => {
-    modal.close()
+    modal.close() // And this closes it!
+})
+
+// code completion done for me with built in Copilot, based on the code above and from the week 17 class site
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.close() // Close it too then.
+    }
 })
