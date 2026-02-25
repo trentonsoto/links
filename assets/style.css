@@ -471,7 +471,7 @@ main {
     font-size: calc(2 * var(--body-copy));
     color: var(--light-brown);
     /* padding: var(--spacing-medium); */
-    /* margin-inline-start: auto; */
+    margin-inline-start: auto;
     margin-block-start: calc(var(--spacing-xs) * -1);
     display: block;
     cursor: pointer;
@@ -479,7 +479,7 @@ main {
     padding: 0;
     inset-block-start: var(--spacing-xs);
     inset-block-start: 0;
-    padding-block-start: var(--spacing-small);
+    padding-block-start: var(--spacing-xs);
     /* I was having trouble getting the modal close button to hide the text behind it */
     /* Claude said to remove inset-block-start and make it 0 */
     /* this was leaving a gap where the text can show */
@@ -514,6 +514,7 @@ main {
         /* some of my titles had 0 height */
         /* min-height: fit-content; */
         padding: 0;
+        padding-block-start: var(--spacing-small);
         overflow: hidden;
     }
 
