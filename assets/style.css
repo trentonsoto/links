@@ -343,8 +343,15 @@ main {
     /* I wanted the cards to have a vintage look, so I added a sepia filter */
     transition: box-shadow 0.3s ease;
     &:hover {
-        box-shadow: 
-            0.3rem 0.8rem 0 var(--dark-brown), 0.5rem 1.1rem 0 var(--mid-brown);
+        box-shadow: 0.3rem 0.8rem 0 var(--dark-brown), 0.5rem 1.1rem 0 var(--mid-brown);
+
+        figure, iframe, video {
+            transform: scale(0.90);
+        }
+
+        picture, img {
+            transform: scale(0.90);
+        }
     }
 
     /* I needed to have this stuff gone */
@@ -361,6 +368,7 @@ main {
         /* Found on MDN */
         /* Without it, the thumbnails would shrink, and cannot get longer*/
         overflow: hidden;
+        transition: transform 0.3s ease-in-out;
     }
 
     picture, img {
@@ -368,6 +376,7 @@ main {
         height: 100%;
         /* display: block; */
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
     }
    
 
