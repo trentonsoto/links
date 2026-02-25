@@ -96,6 +96,7 @@ let renderBlock = (blockData) => {
 			<span class="text-card-title">${blockData.title}</span>
 				<div class="text">
 					<p>${ blockData.content.html }</p>
+					<div class="text-content">${ blockData.content.url || '' }</div>
 					${ sharedInfo }
 					<p>${ blockData.description?.html }</p>
 				</div>
