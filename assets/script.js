@@ -68,3 +68,4 @@ navLinks.forEach(link => {
 })
 // this was done with built in Copilot, based on the code above and from the week 17 class site. It adds an “active” class to the button that’s been clicked, and removes it from the others
 // I set a variable for all the nav buttons, then looped through them to add an event listener to each one. When a button is clicked, it removes the “active” class from all buttons, and then adds it to the one that was clicked
+// I wasn't going to add this because I couldn't figure out how to do this, but Copilot was able to understand what I wanted to do and help with the code, which was very helpful 
