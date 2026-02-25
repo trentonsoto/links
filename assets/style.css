@@ -422,6 +422,15 @@ main {
         picture, img {
             transition: transform 0.3s ease-in-out;
         }
+
+        &:hover {
+            figure, iframe, video {
+                transform: none;
+            }
+            picture, img {
+                transform: none;
+            }
+        }
     }
 }
 
