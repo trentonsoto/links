@@ -56,3 +56,14 @@ modal.addEventListener('click', (event) => {
         modal.close() // Close it too then.
     }
 })
+
+
+let navLinks = document.querySelectorAll('nav button')
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(link => link.classList.remove('active'))
+        link.classList.add('active')
+    })
+})
+// this was done with built in Copilot, based on the code above and from the week 17 class site. It adds an “active” class to the button that’s been clicked, and removes it from the others
