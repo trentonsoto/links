@@ -450,7 +450,7 @@ main {
     font-family: var(--scoreboard-font);
     font-size: calc(2 * var(--body-copy));
     color: var(--light-brown);
-    padding: var(--spacing-medium);
+    /* padding: var(--spacing-medium); */
     /* margin-inline-start: auto; */
     margin-block-start: var(--spacing-xs);
     display: block;
