@@ -462,6 +462,11 @@ main {
     gap: var(--spacing-small);
     padding-block-end: calc(2 * var(--spacing-small));
 
+    /* .card-content {
+        font-family: var(--body-font);
+        font-size: var(--body-copy);
+    } */
+
      .card-title {
         font-family: var(--scoreboard-font);
         font-size: calc(0.85 * var(--body-copy));
@@ -512,6 +517,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     #channel-users {
         display: flex;
@@ -574,3 +580,5 @@ footer {
         }
     }
 }
+
+
