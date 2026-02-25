@@ -481,6 +481,12 @@ main {
         overflow: hidden;
     }
 
+    /* I needed help getting the paragraphs to add space and didn't know how to target it */
+    /* Claude said to target the p + p selector */
+    /* this allows space after any paragraph (adjacent sibling selector) */
+    .card-description p + p{
+            margin-block-start: var(--spacing-small);
+        }
     .card-description p{
         font-family: var(--body-font);
         font-size: var(--body-copy);
