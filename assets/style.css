@@ -418,7 +418,7 @@ main {
     background-color: var(--cream);
     border: solid var(--orange) var(--court-lines);
     border-radius: 0.3rem;
-    /* padding: var(--spacing-small); */
+    padding: var(--spacing-small);
     max-width: calc(20 * var(--spacing-small));
     box-shadow: 0.3rem 0.3rem 0 var(--dark-brown), 0.5rem 0.5rem 0 var(--mid-brown);
     filter: sepia(0.2) contrast(1);
